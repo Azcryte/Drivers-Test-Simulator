@@ -46,8 +46,29 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Checkpoint01.cs" />
+     <Compile Include="Assets\Scripts\Checkpoint02.cs" />
+     <Compile Include="Assets\Scripts\Checkpoint03.cs" />
+     <Compile Include="Assets\Scripts\Checkpoint04.cs" />
+     <Compile Include="Assets\Scripts\Checkpoint05.cs" />
+     <Compile Include="Assets\Scripts\Checkpoint06.cs" />
+     <Compile Include="Assets\Scripts\Checkpoint07.cs" />
+     <Compile Include="Assets\Scripts\Checkpoint08.cs" />
+     <Compile Include="Assets\Scripts\Checkpoint09.cs" />
+     <Compile Include="Assets\Scripts\Checkpoint10.cs" />
+     <Compile Include="Assets\Scripts\Checkpoint11.cs" />
+     <Compile Include="Assets\Scripts\Checkpoint12.cs" />
+     <Compile Include="Assets\Scripts\DisplayScore.cs" />
+     <Compile Include="Assets\Scripts\GameVariables.cs" />
+     <Compile Include="Assets\Scripts\HitStationaryCar.cs" />
      <Compile Include="Assets\Scripts\InvertCamera.cs" />
+     <Compile Include="Assets\Scripts\MovingCarScript.cs" />
+     <Compile Include="Assets\Scripts\MovingCarTrigger.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\PointerRotate.cs" />
+     <Compile Include="Assets\Scripts\Progression.cs" />
+     <Compile Include="Assets\Scripts\TriggerOOBWarning.cs" />
+     <Compile Include="Assets\Scripts\TriggerReset.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

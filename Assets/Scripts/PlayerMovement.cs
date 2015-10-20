@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
 
+	public Transform myCamera;
+
 	Rigidbody rbody;
 	Vector3 inputVector;
 
@@ -13,12 +15,32 @@ public class PlayerMovement : MonoBehaviour {
 
 	void Start () {
 		rbody = GetComponent<Rigidbody>();
+
 	}
 
 	void Update () {
+		float mouseX = Input.GetAxis ("Mouse X");
+		//myCamera.Rotate (0f, mouseX, 0f);
+		//Debug.Log(myCamera.rotation.y);
+		//Debug.Log(mouseX);
+		if (myCamera.rotation.y < 0.82 && mouseX > 0) {
+			myCamera.Rotate (0f, mouseX, 0f);
+		}
+		else if (myCamera.rotation.y > 0.57 && mouseX < 0) {
+			myCamera.Rotate (0f, mouseX, 0f);
+		}
+		//gas = Input.GetAxis("Vertical");
+		//turn = Input.GetAxis("Horizontal") * turnSpeed * gas;
 		gas = Input.GetAxis("Vertical");
 		turn = Input.GetAxis("Horizontal") * turnSpeed * gas;
 		inputVector = new Vector3(0f, 0f, gas * moveSpeed);
+
+		if (Input.GetKeyDown (KeyCode.P)) {
+			Application.LoadLevel ( Application.loadedLevel );
+			Time.timeScale = 1;
+			GameVariables.step = 1;
+			GameVariables.score = 0;
+		}
 		
 	}
 	
