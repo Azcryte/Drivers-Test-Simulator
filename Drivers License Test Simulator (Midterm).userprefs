@@ -18,7 +18,7 @@
       <File FileName="Assets\Scripts\Checkpoint04.cs" Line="33" Column="2" />
       <File FileName="Assets\Scripts\PlayerMovement.cs" Line="12" Column="23" />
       <File FileName="Assets\Scripts\InvertCamera.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MovingCarScript.cs" Line="33" Column="65" />
+      <File FileName="Assets\Scripts\MovingCarScript.cs" Line="39" Column="6" />
       <File FileName="Assets\Scripts\HitStationaryCar.cs" Line="5" Column="48" />
       <File FileName="Assets\Scripts\MovingCarTrigger.cs" Line="15" Column="3" />
     </Files>

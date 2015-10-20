@@ -19,18 +19,18 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	void Update () {
-		float mouseX = Input.GetAxis ("Mouse X");
+		//float mouseX = Input.GetAxis ("Mouse X");
 		//myCamera.Rotate (0f, mouseX, 0f);
 		//Debug.Log(myCamera.rotation.y);
 		//Debug.Log(mouseX);
-		if (myCamera.rotation.y < 0.82 && mouseX > 0) {
-			myCamera.Rotate (0f, mouseX, 0f);
-		}
-		else if (myCamera.rotation.y > 0.57 && mouseX < 0) {
-			myCamera.Rotate (0f, mouseX, 0f);
-		}
-		//gas = Input.GetAxis("Vertical");
-		//turn = Input.GetAxis("Horizontal") * turnSpeed * gas;
+		//if (myCamera.rotation.y < 0.82 && mouseX > 0) {
+		//if (myCamera.rotation.y - rbody.rotation.y < 0.125f && mouseX > 0) {
+		//	myCamera.Rotate (0f, mouseX, 0f);
+		//}
+		//else if (myCamera.rotation.y > 0.57 && mouseX < 0) {
+		//else if (myCamera.rotation.y - rbody.rotation.y > -0.125f && mouseX < 0) {
+		//	myCamera.Rotate (0f, mouseX, 0f);
+		//}
 		gas = Input.GetAxis("Vertical");
 		turn = Input.GetAxis("Horizontal") * turnSpeed * gas;
 		inputVector = new Vector3(0f, 0f, gas * moveSpeed);
@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour {
 	}
 	
 	void FixedUpdate() {
-		float yVel = rbody.velocity.y;
+		//float yVel = rbody.velocity.y;
 		if ( gas != 0 ) {
 			//Debug.Log ( "input: " + Input.GetAxis("Horizontal"));
 			//Debug.Log ( "turnSpeed: " + turnSpeed);
@@ -55,6 +55,6 @@ public class PlayerMovement : MonoBehaviour {
 			
 			rbody.velocity = transform.TransformDirection(inputVector);
 		}
-		rbody.velocity += new Vector3(0f, yVel, 0f);
+		//rbody.velocity += new Vector3(0f, yVel, 0f);
 	}
 }
