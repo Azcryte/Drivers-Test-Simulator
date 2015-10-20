@@ -7,9 +7,11 @@ public class PlayerMovement : MonoBehaviour {
 
 	Rigidbody rbody;
 	Vector3 inputVector;
+	//Vector3 frictionVector;
 
 	float moveSpeed = 5f;
 	float turnSpeed = 2f;
+	//float friction = 3f;
 	float gas;
 	float turn;
 
@@ -33,7 +35,6 @@ public class PlayerMovement : MonoBehaviour {
 		//}
 		gas = Input.GetAxis("Vertical");
 		turn = Input.GetAxis("Horizontal") * turnSpeed * gas;
-		inputVector = new Vector3(0f, 0f, gas * moveSpeed);
 
 		if (Input.GetKeyDown (KeyCode.P)) {
 			Application.LoadLevel ( Application.loadedLevel );
@@ -45,6 +46,9 @@ public class PlayerMovement : MonoBehaviour {
 	}
 	
 	void FixedUpdate() {
+		inputVector = new Vector3(0f, 0f, gas * moveSpeed);
+		//frictionVector = new Vector3(0f, 0f, friction);
+
 		//float yVel = rbody.velocity.y;
 		if ( gas != 0 ) {
 			//Debug.Log ( "input: " + Input.GetAxis("Horizontal"));

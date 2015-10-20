@@ -9,7 +9,7 @@ public class Checkpoint01 : MonoBehaviour {
 
 	void OnTriggerEnter() {
 		if (GameVariables.step == 1) {
-			instructions.text = "Okay, make your way to the next intersection and continue straight. Don't forget to stop at stop signs! (For at least 2 seconds)";
+			instructions.text = "Okay, make your way to the next intersection and continue straight. Don't forget to stop and look both ways at intersections!";
 			rend.enabled = false;
 			GameVariables.score += 50;
 			GameVariables.step = 2;
